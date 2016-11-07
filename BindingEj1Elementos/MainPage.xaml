@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="BindingEj1Elementos.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BindingEj1Elementos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="100" TickFrequency="1" TickPlacement="TopLeft" Value="{Binding ElementName=txt, Path=Text, Mode=TwoWay}"></Slider>
+            <TextBlock Text="Simple Text" Name="tblBindeado" Grid.Row="1" FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}" ></TextBlock>
+            <TextBox Name="txt" Grid.Row="2" Text="{ Binding ElementName=sliderFontSize, Path=Value}"></TextBox>
+        </Grid>
+
+
+    </Grid>
+</Page>
