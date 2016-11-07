@@ -17,7 +17,7 @@
 
             <Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="100" TickFrequency="1" TickPlacement="TopLeft" Value="{Binding ElementName=txt, Path=Text, Mode=TwoWay}"></Slider>
             <TextBlock Text="Simple Text" Name="tblBindeado" Grid.Row="1" FontSize="{Binding ElementName=sliderFontSize, Path=Value, Mode=TwoWay}" ></TextBlock>
-            <TextBox Name="txt" Grid.Row="2" Text="{ Binding ElementName=sliderFontSize, Path=Value}"></TextBox>
+            <TextBox Name="txt" Grid.Row="2" Text="{ Binding ElementName=sliderFontSize, Path=Value}" InputScope="Number" KeyDown="txt_KeyDown"></TextBox>
         </Grid>
 
 

@@ -26,5 +26,13 @@ namespace BindingEj1Elementos
         {
             this.InitializeComponent();
         }
+
+        private void txt_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.Key.ToString(), "\\d+" ))
+                e.Handled = true;
+        }
+ 
     }
-}
+    }
+    
